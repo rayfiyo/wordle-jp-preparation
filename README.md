@@ -34,7 +34,8 @@
         s/だ/た/g; s/ぢ/ち/g; s/づ/つ/g; s/で/て/g; s/ど/と/g; \
         s/ば/は/g; s/び/ひ/g; s/ぶ/ふ/g; s/べ/へ/g; s/ぼ/ほ/g; \
         s/ぱ/は/g; s/ぴ/ひ/g; s/ぷ/ふ/g; s/ぺ/へ/g; s/ぽ/ほ/g; \
-        s/っ/つ/g; s/ゃ/や/g; s/ゅ/ゆ/g; s/ょ/よ/g\""
+        s/ぁ/あ/g; s/ぃ/い/g; s/ぅ/う/g; s/ぇ/え/g; s/ぉ/お/g; \
+        s/ゃ/や/g; s/ゅ/ゆ/g; s/ょ/よ/g; s/っ/つ/g; s/ゎ/わ/g; s/ゕ/か/g; s/ゖ/け/g\""
         cmd | getline new_col1; close(cmd)
         print new_col1 "," $2
     }' five_character_only.csv
