@@ -11,17 +11,16 @@
 
 ## dir
 
-- `bunruidb_utf-8.csv`
+- [`bunruidb_utf-8.csv`](https://github.com/rayfiyo/wordle-jp-preparation/blob/main/bunruidb_utf-8.csv)
   - masayu-a/WLSP の`bunruidb.csv`を、BOM なしUTF-8 にしたもの
-- `five_character_only.csv`
+- [`five_character_only.csv`](https://github.com/rayfiyo/wordle-jp-preparation/blob/main/five_character_only.csv)
   - Wordle jp 用に抽出した５文字の単語
   - `ひらがな,漢字（最適な表現）` の形式にしている
   - 抽出方法は次の標準出力をリダイレクトした（`> five_character_only.csv`）
     ```bash
     awk -F, 'length($14)==5 { print $14,$12 }' bunruidb_utf-8.csv | sed -E 's/ /,/g'
     ```
-- `for_wordle_jp.csv`
-
+- [`for_wordle_jp.csv`](https://github.com/rayfiyo/wordle-jp-preparation/blob/main/for_wordle_jp.csv)
   - `for_wordle_jp.csv` の読み（１列目）を Wordle で出題される形式に変換したもの
   - 掲載の単語と Wordle JP で入力できる形式になれるという目的で、
     単語帳アプリ等で使えるよう `ひらがな（Wordleで入力できる形式）,漢字（最適な表現）`
@@ -41,3 +40,5 @@
         print new_col1 "," $2
     }' five_character_only.csv
     ```
+- [`for_wordle_jp_plus.csv`](https://github.com/rayfiyo/wordle-jp-preparation/blob/main/for_wordle_jp_plus.csv)
+  - `for_wordle_jp.csv` に、長音を追加したり、行頭に `.` を追加したもの
